@@ -1,0 +1,1 @@
+# Rodrigo Faro Discord bot
