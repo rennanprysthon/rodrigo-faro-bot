@@ -6,11 +6,17 @@ const client = new DiscordJs.Client({
   intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES],
 });
 
-client.on("ready", () =>
-  logger.info("Discord Bot is running! " + getRandomEmoji())
-);
+client.on("ready", () => {
+  logger.info("Discord Bot is running! " + getRandomEmoji());
 
-client.login(process.env.DISCORD_TOKEN);
+  const guild = client.guilds.cache.get(process.env.GUILD_ID);
+
+  const commands = guild.commands || client.application?.commands;
+  commands?.create({
+    name: "hello",
+    description: "Says hello",
+  });
+});
 
 client.on("messageCreate", (message) => {
   if (message.content === "/hello") {
@@ -19,3 +25,20 @@ client.on("messageCreate", (message) => {
     });
   }
 });
+
+client.on("interactionCreate", async (interaction) => {
+  if (!interaction.isCommand()) {
+    return;
+  }
+
+  const { commandName, option } = interaction;
+
+  if (commandName === "hello") {
+    interaction.reply({
+      content: "Hello " + getRandomEmoji(),
+      ephemeral: true,
+    });
+  }
+});
+
+client.login(process.env.DISCORD_TOKEN);
