@@ -11,3 +11,23 @@ const log = pino({
 });
 
 export const logger = log;
+
+export function getRandomEmoji() {
+  const emojiList = [
+    "😭",
+    "😄",
+    "😌",
+    "🤓",
+    "😎",
+    "😤",
+    "🤖",
+    "😶‍🌫️",
+    "🌏",
+    "📸",
+    "💿",
+    "👋",
+    "🌊",
+    "✨",
+  ];
+  return emojiList[Math.floor(Math.random() * emojiList.length)];
+}
