@@ -33,8 +33,8 @@ client.on("ready", () => {
   const commands = guild.commands || client.application?.commands;
 
   commands?.create({
-    name: "join",
-    description: "Join voice channel",
+    name: "faro",
+    description: "Faro shows up",
   });
 });
 
@@ -58,7 +58,7 @@ client.on("interactionCreate", (interaction) => {
 });
 
 client.on("messageCreate", async (message) => {
-  if (message.content === "!join") {
+  if (message.content === "!faro") {
     joinVoiceChannel({
       channelId: message.member.voice.channel.id,
       guildId: message.guild.id,
