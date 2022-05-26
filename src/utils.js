@@ -31,3 +31,18 @@ export function getRandomEmoji() {
   ];
   return emojiList[Math.floor(Math.random() * emojiList.length)];
 }
+
+export const RESOURCES = [
+  {
+    key: "cavalo_id",
+    audio: "cavalo.mp3",
+    label: "Cavalo",
+    message: "CAVALO :racehorse:",
+  },
+  {
+    key: "tome_id",
+    audio: "tome.mp3",
+    label: "Tome",
+    message: "TOME :punch:",
+  },
+];
