@@ -65,9 +65,27 @@ client.on("messageCreate", async (message) => {
       adapterCreator: message.guild.voiceAdapterCreator,
     });
 
-    const row = new MessageActionRow().addComponents(Actions);
+    const components = Actions.reduce((resultArray, item, index) => {
+      const chunkIndex = Math.floor(index / 5);
 
-    await message.reply({ ephemeral: true, components: [row] });
+      if (!resultArray[chunkIndex]) {
+        resultArray[chunkIndex] = []; // start a new chunk
+      }
+
+      resultArray[chunkIndex].push(item);
+
+      return resultArray;
+    }, []);
+
+    const rows = [];
+    for (const arr of components) {
+      rows.push(new MessageActionRow().addComponents(arr));
+    }
+
+    await message.reply({
+      ephemeral: true,
+      components: rows,
+    });
   }
 
   if (message.content === "!leave") {
