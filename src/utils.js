@@ -107,4 +107,22 @@ export const RESOURCES = [
     label: "DEMAAIS",
     message: "AIAIAI",
   },
+  {
+    key: "irra",
+    audio: "irra.mp3",
+    label: "Irrraaaaaaa",
+    message: "Irraaa",
+  },
+  {
+    key: "xiii",
+    audio: "xiii.mp3",
+    label: "Xiii",
+    message: "Xii",
+  },
+  {
+    key: "pare",
+    audio: "pare.mp3",
+    label: "Pare",
+    message: "Paree",
+  },
 ];
