@@ -53,7 +53,7 @@ client.on("interactionCreate", (interaction) => {
 
     connection.subscribe(player);
 
-    interaction.reply({ content: action.message, ephemeral: true });
+    interaction.deferUpdate();
   }
 });
 
