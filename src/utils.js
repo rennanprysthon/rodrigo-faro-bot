@@ -77,4 +77,34 @@ export const RESOURCES = [
     label: "Que papelao!",
     message: ":roll_of_paper: Que papelão, hein! :neutral_face:",
   },
+  {
+    key: "queissomeuficalma",
+    audio: "queissomeuficalma.mp3",
+    label: "Que isso meu fi, calma",
+    message: ":raised-hand: Que isso meu fi, calma :raised-hand:",
+  },
+  {
+    key: "uiii",
+    audio: "uiii.mp3",
+    label: "UIIi",
+    message: "UUII",
+  },
+  {
+    key: "UEPA",
+    audio: "uepa.mp3",
+    label: "Uepaa",
+    message: "UUII",
+  },
+  {
+    key: "aiaiai",
+    audio: "aiaiai.mp3",
+    label: "Aiaiai",
+    message: "AIAIAI",
+  },
+  {
+    key: "demais",
+    audio: "demais.mp3",
+    label: "DEMAAIS",
+    message: "AIAIAI",
+  },
 ];
