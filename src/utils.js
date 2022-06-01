@@ -127,19 +127,19 @@ export const RESOURCES = [
   },
   {
     key: "abruroabruo",
-    audio: "abruroaburo.m4a",
+    audio: "abruroaburo.mp3",
     label: "aburo",
     message: "Aburbrubrau",
   },
   {
     key: "ebrincadeira",
-    audio: "Ebrincadeira.m4a",
+    audio: "Ebrincadeira.mp3",
     label: "Brincadeira",
     message: "É brincadeira",
   },
   {
     key: "FicouBaum",
-    audio: "FicouBaum.m4a",
+    audio: "FicouBaum.mp3",
     label: "Ficou Baum Naum",
     message: "Ficou baum naum em",
   },
